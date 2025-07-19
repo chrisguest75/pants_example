@@ -2,13 +2,19 @@
 
 Pantsbuild: The ergonomic build system
 
+NOTES:
+
+* THIS IS NOT CONFIGURED CORRECTLY YET.
+
 TODO:
 
+* Terraform
+  * It's using terraform 1.9.
 * Build a typescript package
 * Build a typescript cli tool
 * Build a python package
 * Build a cpp package
-* Terraform
+* Build a docker image
 
 ## Install
 
@@ -29,6 +35,8 @@ pants help tailor
 
 ```sh
 pants test ::  
+
+pants fix ::
 ```
 
 

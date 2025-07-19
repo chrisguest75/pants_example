@@ -5,3 +5,26 @@ backend_packages = [
     "pants.backend.python",
     "pants.backend.experimental.terraform",
 ]
+
+[python]
+# The default interpreter constraints for code in this repo. Individual targets can override
+#  this with the `interpreter_constraints` field. See
+#  https://www.pantsbuild.org/docs/python-interpreter-compatibility.
+#
+# Modify this if you don't have Python 3.9 on your machine.
+# This can be a range, such as [">=3.8,<3.11"], but it's usually recommended to restrict
+# to a single minor version.
+interpreter_constraints = ["==3.11.*"]
+
+# Enable the "resolves" mechanism, which turns on lockfiles for user code. See
+# https://www.pantsbuild.org/docs/python-third-party-dependencies. This also adds the
+# `generate-lockfiles` goal for Pants to generate the lockfile for you.
+enable_resolves = true
+
+[python-bootstrap]
+# We search for interpreters both on the $PATH and in the `$(pyenv root)/versions` folder.
+#  If you're using macOS, you may want to leave off the <PATH> entry to avoid using the
+#  problematic system Pythons. See
+#  https://www.pantsbuild.org/docs/python-interpreter-compatibility#changing-the-interpreter-search-path.
+search_path = ["<PATH>", "<PYENV>"]
+
