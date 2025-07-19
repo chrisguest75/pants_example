@@ -1,6 +1,7 @@
 [GLOBAL]
 pants_version = "2.27.0"
 backend_packages = [
-  "pants.backend.shell",
-  "pants.backend.python",
+    "pants.backend.shell",
+    "pants.backend.python",
+    "pants.backend.experimental.terraform",
 ]

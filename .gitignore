@@ -1,1 +1,9 @@
 .pants.d
+.DS_Store
+.terraform
+*.deb
+*.gz
+*.tfstate
+*.tfplan
+*.tfstate.backup
+.env

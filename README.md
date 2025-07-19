@@ -8,6 +8,7 @@ TODO:
 * Build a typescript cli tool
 * Build a python package
 * Build a cpp package
+* Terraform
 
 ## Install
 
